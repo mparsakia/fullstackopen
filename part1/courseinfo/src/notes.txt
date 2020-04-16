@@ -1,0 +1,69 @@
+/* 
+
+JavaScripts => (arrow operator) quick notes
+
+var a = [
+  "We're up all night 'til the sun",
+  "We're up all night to get some",
+  "We're up all night for good fun",
+  "We're up all night to get lucky"
+];
+
+// These two assignments are equivalent:
+
+// Old-school:
+var a2 = a.map(function(s){ return s.length });
+
+// ECMAscript 6 using arrow functions
+var a3 = a.map( s => s.length );
+
+// both a2 and a3 will be equal to [31, 30, 31, 31]
+
+https://www.w3schools.com/js/js_arrow_function.asp
+
+W3Schools Explanation: 
+BEFORE: 
+hello = function(xyz) { // params are optional 'xyz'
+  return "Hello World: " + xyz;
+}
+
+AFTER:
+hello = () => {
+  return "Hello World!";
+}
+
+RETURN VALUE BY DEFAULT ARROW FUNCS:
+hello = () => "Hello World!";
+
+ARROW FUNC WITH PARAMS:
+hello = (val) => "Hello " + val;
+
+ARROW FUNC WITHOUT PARENTHESIS (for one param only):
+hello = val => "Hello " + val;
+
+
+--------------------------------------------------------
+
+From documentation The exterior set of curly braces 
+are letting JSX know you want a JS expression. 
+The interior set of curly braces represent a JavaScript object,
+meaning you’re passing in a object to the style attribute.
+
+  <Content exercises = {{
+    p1:part1, ex1:exercises1, 
+    p2:part2, ex2:exercises2, 
+    p3:part3, ex3: exercises3
+    }} 
+  />
+
+  const Content = (props) => {
+    return (
+      <div>
+      <Part part={props.exercises.p1} exercise={props.exercises.ex1}/>
+      <Part part={props.exercises.p2} exercise={props.exercises.ex2}/>
+      <Part part={props.exercises.p3} exercise={props.exercises.ex3}/>
+      </div>
+    )
+  }
+
+*/
