@@ -1,0 +1,125 @@
+/* 
+
+JavaScripts => (arrow operator) quick notes
+
+var a = [
+  "We're up all night 'til the sun",
+  "We're up all night to get some",
+  "We're up all night for good fun",
+  "We're up all night to get lucky"
+];
+
+// These two assignments are equivalent:
+
+// Old-school:
+var a2 = a.map(function(s){ return s.length });
+
+// ECMAscript 6 using arrow functions
+var a3 = a.map( s => s.length );
+
+// both a2 and a3 will be equal to [31, 30, 31, 31]
+
+https://www.w3schools.com/js/js_arrow_function.asp
+
+W3Schools Explanation: 
+BEFORE: 
+hello = function(xyz) { // params are optional 'xyz'
+  return "Hello World: " + xyz;
+}
+
+AFTER:
+hello = () => {
+  return "Hello World!";
+}
+
+RETURN VALUE BY DEFAULT ARROW FUNCS:
+hello = () => "Hello World!";
+
+ARROW FUNC WITH PARAMS:
+hello = (val) => "Hello " + val;
+
+ARROW FUNC WITHOUT PARENTHESIS (for one param only):
+hello = val => "Hello " + val;
+
+
+--------------------------------------------------------
+
+From documentation The exterior set of curly braces 
+are letting JSX know you want a JS expression. 
+The interior set of curly braces represent a JavaScript object,
+meaning you’re passing in a object to the style attribute.
+
+  <Content exercises = {{
+    p1:part1, ex1:exercises1, 
+    p2:part2, ex2:exercises2, 
+    p3:part3, ex3: exercises3
+    }} 
+  />
+
+  const Content = (props) => {
+    return (
+      <div>
+      <Part part={props.exercises.p1} exercise={props.exercises.ex1}/>
+      <Part part={props.exercises.p2} exercise={props.exercises.ex2}/>
+      <Part part={props.exercises.p3} exercise={props.exercises.ex3}/>
+      </div>
+    )
+  }
+
+
+
+
+https://daveceddia.com/pluggable-slots-in-react-components/
+
+<Button>
+  <Icon name="dollars"/>
+  <span>BUY NOW</span>
+</Button>
+Let’s zoom in on the implementation of Button and see what it does with the children:
+
+function Button(props) {
+  return (
+    <button>
+      {props.children}
+    </button>
+  );
+}
+
+
+
+// This code...
+<Button children={<span>Click Me</span>} />
+
+// Is equivalent to this code...
+<Button>
+  <span>Click Me</span>
+</Button>
+
+<Layout
+  left={<Sidebar/>}
+  top={<NavBar/>}
+  center={<Content/>}
+/>
+
+Inside the Layout component, it can do whatever it needs with the left, top and center props. Here’s a simple example:
+
+function Layout(props) {
+  return (
+    <div className="layout">
+      <div className="top">{props.top}</div>
+      <div className="left">{props.left}</div>
+      <div className="center">{props.center}</div>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+*/
