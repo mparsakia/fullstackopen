@@ -1,0 +1,21 @@
+{
+  "name": "backend3",
+  "version": "1.0.0",
+  "description": "backend dev fullstack part 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mparsakia",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9",
+    "morgan": "^1.10.0"
+  }
+}
