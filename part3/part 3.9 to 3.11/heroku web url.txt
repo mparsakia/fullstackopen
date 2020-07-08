@@ -1,5 +1,0 @@
-https://lit-mountain-14693.herokuapp.com/
-
-in this repo "part01" is actually the "Phonebook Frontend", "backend3" is the backend for Phonebook.
-
-I did not copy the node_modules into this directory.
