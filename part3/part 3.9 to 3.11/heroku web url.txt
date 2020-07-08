@@ -1,12 +1,5 @@
 https://lit-mountain-14693.herokuapp.com/
 
-In this repo "backend3" is the backend for Phonebook + build for frontend.
-Note folder "part01" is actually the frontend for the phonebook.
+in this repo "part01" is actually the "Phonebook Frontend", "backend3" is the backend for Phonebook.
 
-I did not copy the node_modules. 
-
-I did not commit the git repo within backend3, so I will just upload the files
-that I changed to get the app working on heroku for purposes of assignment completion.
-If the full files are required I will figure out a way to fix the problem with pushing
-a git repo within another git repo.
-
+I did not copy the node_modules into this directory.
