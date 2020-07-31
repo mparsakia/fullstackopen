@@ -1,0 +1,55 @@
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+
+{
+    "title": "SampleWithID0003",
+    "author": "sampleAuthorWithID0003",
+    "url": "sampleURLwithID0003",
+    "likes": 2147,
+    "userId": "5f229277e5d7532da4960604",
+}
+
+###
+
+POST http://localhost:3003/api/users/
+Content-Type: application/json
+
+{
+  "username": "TestAppUser",
+  "name": "TestAppUser",
+  "password": "TestAppUser"
+}
+
+###
+
+POST http://localhost:3003/api/login/
+Content-Type: application/json
+
+{
+  "username": "TestAppUser",
+  "password": "TestAppUser"
+}
+
+###
+
+
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3RBcHBVc2VyIiwiaWQiOiI1ZjI0MTEwZTliZDYzMjYyYTBiOGQ3MjgiLCJpYXQiOjE1OTYyMDI1MjJ9.IMSHZV7DCXXNjkvRxC7XYYFh4uOuuWGntVInGMAnIi8
+
+{
+    "title": "TOKEN REQUIRED TITLE TO DELETE",
+    "author": "TOKEN REQUIRED AUTHOR TO DELETE",
+    "url": "TOKEN REQUIRED URL TO DELETE",
+    "likes": 221,
+    "userId": "5f24110e9bd63262a0b8d728"
+}
+
+###
+
+
+DELETE http://localhost:3003/api/blogs/5f24312e8bcc3e5ba4653751
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3RBcHBVc2VyIiwiaWQiOiI1ZjI0MTEwZTliZDYzMjYyYTBiOGQ3MjgiLCJpYXQiOjE1OTYyMDI1MjJ9.IMSHZV7DCXXNjkvRxC7XYYFh4uOuuWGntVInGMAnIi8
+
+###
