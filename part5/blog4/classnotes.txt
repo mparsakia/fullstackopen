@@ -1,0 +1,69 @@
+Completed:
+4.1
+4.2
+4.3
+4.4
+4.5
+--
+--
+4.8
+4.9
+4.10
+4.11
+4.12
+4.13 
+4.14  
+4.15
+4.16
+4.17
+4.18
+4.19
+4.21
+--
+
+Deferred:
+4.6
+4.7
+4.22
+
+
+Note... on the ENV file.. not pushed to github:
+###
+// 3 variables need to be in the ENV:
+MONGODB_URI="mongodb+srv://mikep17:xxxxxpasswordxxxxx@cluster0.qjigu.mongodb.net/blogdbtest?retryWrites=true&w=majority"
+PORT=3003
+TEST_MONGODB_URI="mongodb+srv://mikep17:xxxxxpasswordxxxxx@cluster0.qjigu.mongodb.net/blogdbcypress?retryWrites=true&w=majority"
+SECRET="a"
+
+
+###
+
+
+
+
+
+
+Other Notes:
+https://medium.com/@luke_smaki/javascript-es6-arrow-functions-450985f27fdb
+
+-- Arrow Function Recap --
+// FX w no params
+const func = () => {--function code here--}
+
+// FX w one param
+const func = parameter => {--fn code here--}
+
+// FX with multiple params
+const func = (param1,param2) => {--fn code here--}
+
+// Func w single expression is the same as no params on the same line, no brackets.
+// Multiline func is just expanding the brackets across multiple lines.
+
+In the context of functions and this, lexical scoping basically means that a function gets it’s
+value of this from the surrounding code (the actual definition is much more complicated and 
+involves how the JavaScript engine compiles code at run-time).
+Normal functions get their value of this from the context in which they are called. 
+This means that if we want to access the this keyword from the context in which the function
+ was defined, we would have to bind this to the function using the .bind(this) method.
+Arrow functions get their value of this from the context in which they are defined. 
+This cannot be bound to an arrow function.

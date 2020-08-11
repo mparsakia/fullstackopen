@@ -1,0 +1,40 @@
+Completed:
+5.1
+5.2
+5.3
+5.4 (notifies on invalid credentials/logout & new blogpost)
+5.5 
+5.6
+5.7
+5.8 // remember you pass the function that exists where it can update the state!
+5.9
+5.10
+5.11
+5.12
+5.13
+5.14
+5.15
+5.16 // fireEvent may be broken? searched the net for an hour to no avail
+5.17
+5.18
+5.19
+5.20
+5.21
+
+Deferred 5.22
+
+
+
+
+
+Notes:
+JSON.stringify(value); // great for debugging -- dump obj to page in react
+console.log(JSON.stringify(value)) // another good debugger 
+
+https://react-cn.github.io/react/tips/if-else-in-JSX.html //iife in return of JSX
+https://dmitripavlutin.com/check-if-object-has-property-javascript/ // check if obj has properties
+
+Crash the app if react tries to access an undefined property! Make sure to use hasOwnProperty in IIFE if statement
+
+https://stackoverflow.com/questions/2631001/test-for-existence-of-nested-javascript-object-key
+
