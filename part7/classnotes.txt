@@ -1,0 +1,31 @@
+COMPLETED:
+7.1
+7.2
+7.3
+------ basics of react-router routed-anecdotes (nav menus, etc)
+7.4 --- // + custom Hooks
+7.5 
+7.6 --- // no error given, no fix needed
+7.7 --- // custom hooks for country api
+7.8 --- ultimate hooks
+
+
+IN PROGRESS / DEFERRED:
+
+7.9 - 7.21
+
+
+
+
+NOTES:
+
+Notes for 7.9 - 7.21
+These exercises deal with CSS 
+which I use very often and am familiar with
+as well as refactoring previous assignments state 
+to Redux / Redux-Store, which was already covered in part 6.
+At this point I wish to move on with the course to parts 8-10, 
+if time permits I will return to these assignments.
+
+
+
