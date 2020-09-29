@@ -1,0 +1,146 @@
+NOTES FOR PART 8                                                                         
+
+
+
+COMPLETED:
+8.1
+8.2
+8.3 
+8.4
+8.5
+8.6 
+8.7
+8.8 - 8.12
+8.13 - 8.16 (BACKEND MongoDB / Mongoose / LogIn)
+8.17
+8.18
+8.19
+8.20
+8.23
+8.24
+8.25
+
+
+
+DEFERRED:
+8.21 
+8.22
+
+
+
+
+
+
+NOTES:
+Restart the server and refresh the page each time you change the code for GraphQL Playground.
+Make sure backend and frontend are both running... If the frontend crashes make sure backend is active
+
+When using server backend and frontend, make sure the query names you import and define
+are the same as in the backend server code. You can name the query with the ALL_CAPS 
+but the actual code needs to match. 
+
+For example:
+
+In backend we have: 
+
+type Query {
+    //...
+    allBooks(author: String, genre: String): [Book!]!
+}
+
+In frontend corresponding will be in ./queries.js:
+
+export const GET_BOOKS = gql`
+  query {
+    allBooks {
+      title
+      author
+      published
+    }
+  }
+`;
+
+We named the query GET_BOOKS, so we can use it in the App.js in a hook:
+import { GET_AUTHORS, GET_BOOKS, CREATE_BOOK } from "./queries";
+//... 
+const books = useQuery(GET_BOOKS);
+
+
+and the component will be passed props:
+<Books books={books} show={page === "books"} />
+
+
+----------
+
+Nullish coalescing operator (??)
+
+const foo = null ?? 'default string';
+console.log(foo);
+// expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// expected output: 0
+
+
+The nullish coalescing operator (??) is a logical operator 
+that returns its right-hand side operand when its left-hand side operand 
+is null or undefined, and otherwise returns its left-hand side operand.
+
+(null || undefined) ?? "foo"; // returns "foo"
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+Optional chaining (?.)
+
+
+const adventurer = {
+  name: 'Alice',
+  cat: {
+    name: 'Dinah'
+  }
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// expected output: undefined
+
+let customer = {
+  name: "Carl",
+  details: { age: 82 }
+};
+const customerCity = customer?.city ?? "Unknown city";
+console.log(customerCity); // Unknown city
+
+
+Spread syntax (...)
+
+
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// expected output: 6
+
+console.log(sum.apply(null, numbers));
+// expected output: 6
+
+
+const arr = [1, 2, 3];
+const arr2 = [...arr]; // like arr.slice()
+
+arr2.push(4);
+//  arr2 becomes [1, 2, 3, 4]
+//  arr remains unaffected
+
+Note: Spread syntax effectively goes one level deep while copying an array. 
+Therefore, it may be unsuitable for copying multidimensional arrays
+
+
+

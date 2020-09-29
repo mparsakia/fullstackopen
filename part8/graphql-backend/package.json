@@ -1,0 +1,21 @@
+{
+  "name": "graphqlpart8",
+  "version": "1.0.0",
+  "description": "graph ql part 8 assignments",
+  "main": "index.js",
+  "dependencies": {
+    "@apollo/client": "^3.2.0",
+    "apollo-server": "^2.17.0",
+    "graphql": "^15.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.6",
+    "mongoose-unique-validator": "^2.0.3",
+    "uuid": "^8.3.0"
+  },
+  "scripts": {
+    "start": "node library-backend.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

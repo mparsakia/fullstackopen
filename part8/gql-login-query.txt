@@ -1,0 +1,17 @@
+mutation{
+  login(username:"admin", password:"secret"){
+    value
+  }
+}
+
+
+{
+  "data": {
+    "login": {
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI1ZjZjNWExZTQwNTU4ODM4MjQzZjM3Y2QiLCJpYXQiOjE2MDA5MzY3MTR9.V3KLTAnacvsV1iKEFc0YPg1jAf71CwC2UxmqLli6NsI"
+    }
+  }
+}
+
+
+// given back the bearer jwt token
