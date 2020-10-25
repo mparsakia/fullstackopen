@@ -1,0 +1,48 @@
+https://fullstackopen.com/en/part9/react_with_types#deeper-type-usage
+
+const courseParts = [
+  {
+    name: "Fundamentals",
+    exerciseCount: 10,
+    description: "This is an awesome course part"
+  },
+  {
+    name: "Using props to pass data",
+    exerciseCount: 7,
+    groupProjectCount: 3
+  },
+  {
+    name: "Deeper type usage",
+    exerciseCount: 14,
+    description: "Confusing description",
+    exerciseSubmissionLink: "https://fake-exercise-submit.made-up-url.dev"
+  }
+];
+
+
+Let's start by defining types for our different course parts:
+
+interface CoursePartOne {
+  name: "Fundamentals";
+  exerciseCount: number;
+  description: string;
+}
+
+interface CoursePartTwo {
+  name: "Using props to pass data";
+  exerciseCount: number;
+  groupProjectCount: number;
+}
+
+interface CoursePartThree {
+  name: "Deeper type usage";
+  exerciseCount: number;
+  description: string;
+  exerciseSubmissionLink: string;
+}
+
+Next we will create a type union of all these types. We can then use it to define a type for our array, which should accept any of these course part types:
+
+type CoursePart = CoursePartOne | CoursePartTwo | CoursePartThree;
+
+
